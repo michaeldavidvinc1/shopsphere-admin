@@ -1,15 +1,11 @@
 import * as React from "react"
 import {
-  AudioWaveform,
+  Blocks,
   BookOpen,
   Bot,
-  Command,
-  Frame,
-  GalleryVerticalEnd,
-  Map,
-  PieChart,
+  LayoutList,
   Settings2,
-  SquareTerminal,
+  Users2,
 } from "lucide-react"
 
 import {
@@ -23,7 +19,6 @@ import { NavMain } from "./nav-main"
 import { NavUser } from "./nav-user"
 
 
-
 export function AppSidebar({ 
   ...props 
 }: React.ComponentProps<typeof Sidebar>) {
@@ -33,113 +28,51 @@ export function AppSidebar({
       email: "m@example.com",
       avatar: "/avatars/shadcn.jpg",
     },
-    teams: [
-      {
-        name: "Acme Inc",
-        logo: GalleryVerticalEnd,
-        plan: "Enterprise",
-      },
-      {
-        name: "Acme Corp.",
-        logo: AudioWaveform,
-        plan: "Startup",
-      },
-      {
-        name: "Evil Corp.",
-        logo: Command,
-        plan: "Free",
-      },
-    ],
     navMain: [
       {
         title: "Dashboard",
-        url: `/store`,
+        url: "/",
+        icon: Blocks,
       },
       {
-        title: "Product",
-        url: "#",
-        isActive: true,
-        items: [
-          {
-            title: "List Product",
-            url: `/store/product`,
-          },
-          {
-            title: "Add Product",
-            url: "#",
-          },
-        ],
+        title: "List Category",
+        url: "/",
+        icon: LayoutList,
       },
       {
-        title: "Models",
-        url: "#",
-        items: [
-          {
-            title: "Genesis",
-            url: "#",
-          },
-          {
-            title: "Explorer",
-            url: "#",
-          },
-          {
-            title: "Quantum",
-            url: "#",
-          },
-        ],
+        title: "List User",
+        url: "/",
+        icon: Users2,
       },
-      {
-        title: "Documentation",
-        url: "#",
-        items: [
-          {
-            title: "Introduction",
-            url: "#",
-          },
-          {
-            title: "Get Started",
-            url: "#",
-          },
-          {
-            title: "Tutorials",
-            url: "#",
-          },
-          {
-            title: "Changelog",
-            url: "#",
-          },
-        ],
-      },
-      {
-        title: "Settings",
-        url: "#",
-        items: [
-          {
-            title: "General",
-            url: "#",
-          },
-          {
-            title: "Team",
-            url: "#",
-          },
-          {
-            title: "Billing",
-            url: "#",
-          },
-          {
-            title: "Limits",
-            url: "#",
-          },
-        ],
-      },
-      
+      // {
+      //   title: "Settings",
+      //   url: "#",
+      //   icon: Settings2,
+      //   items: [
+      //     {
+      //       title: "General",
+      //       url: "#",
+      //     },
+      //     {
+      //       title: "Team",
+      //       url: "#",
+      //     },
+      //     {
+      //       title: "Billing",
+      //       url: "#",
+      //     },
+      //     {
+      //       title: "Limits",
+      //       url: "#",
+      //     },
+      //   ],
+      // },
     ],
   }
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <h1>Dashboard</h1>
-        {/* <TeamSwitcher teams={data.teams} /> */}
+        <h1>Admin Panel</h1>
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
