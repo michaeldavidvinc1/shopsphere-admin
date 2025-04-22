@@ -4,5 +4,6 @@ export const ROUTES = {
 }
 
 export const API_URL = {
-    LOGIN: "/auth/login"
+    LOGIN: "/auth/login",
+    DASHBOARD: "/"
 }
