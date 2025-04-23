@@ -5,5 +5,6 @@ export const ROUTES = {
 
 export const API_URL = {
     LOGIN: "/auth/login",
-    DASHBOARD: "/"
+    DASHBOARD: "/",
+    CATEGORY: "/category"
 }
