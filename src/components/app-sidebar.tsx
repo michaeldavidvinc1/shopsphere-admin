@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/sidebar"
 import { NavMain } from "./nav-main"
 import { NavUser } from "./nav-user"
+import { ROUTES } from "@/constant"
 
 
 export function AppSidebar({ 
@@ -31,12 +32,12 @@ export function AppSidebar({
     navMain: [
       {
         title: "Dashboard",
-        url: "/",
+        url: ROUTES.DASHBOARD,
         icon: Blocks,
       },
       {
         title: "List Category",
-        url: "/",
+        url: ROUTES.CATEGORY,
         icon: LayoutList,
       },
       {

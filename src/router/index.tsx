@@ -4,6 +4,7 @@ import { ROUTES } from "@/constant";
 import LoginPage from "@/pages/auth/login";
 import DashboardPage from "@/pages/dashboard";
 import { Route, Routes } from "react-router-dom";
+import CategoryRoute from "./category.route";
 
 export default function AppRoutes(){
     return (
@@ -23,6 +24,7 @@ export default function AppRoutes(){
                 }
             >
                 <Route path={ROUTES.DASHBOARD} element={<DashboardPage />} />
+                <Route path={`${ROUTES.CATEGORY}/*`} element={<CategoryRoute />} />
             </Route>
         </Routes>
     )
