@@ -20,11 +20,10 @@ export const authApi = apiSlice.injectEndpoints({
                         email: data.data.user.email,
                         role: data.data.user.role,
                     };
-                    console.log(userData)
                     dispatch(setUser(userData));
-            
                     localStorage.setItem("user", JSON.stringify(userData));
                     localStorage.setItem("token", data.data.tokens.access.token);
+                    localStorage.setItem("refresh", data.data.tokens.refresh.token);
                 } catch (err) {
                     console.error("Login failed:", err);
                 }

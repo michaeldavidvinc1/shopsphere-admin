@@ -77,8 +77,7 @@ export const columns: ColumnDef<Category>[] = [
             // const [changeStatusCategory] = useChangeStatusCategoryMutation();
 
             const handleEdit = (slug: string) => {
-                console.log(slug)
-                // navigate(ROUTES.UPDATE_CATEGORY(slug))
+                navigate(ROUTES.UPDATE_CATEGORY(slug))
             }
 
             const handleDelete = (slug: string) => {
