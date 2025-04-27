@@ -12,6 +12,7 @@ export const API_URL = {
   CATEGORY_CREATE: "/admin/category/create",
   GET_SINGLE_CATEGORY: (slug: string) =>  `/admin/category/${slug}`,
   UPDATE_CATEGORY: (slug: string) =>  `/admin/category/${slug}`,
+  DELETE_CATEGORY
 };
 
 export const CategoryListBreadcrumb = [
